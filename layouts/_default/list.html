@@ -1,17 +1,19 @@
 {{ define "main" }}
   <main id="main">
-    <h1>{{ .Title }}</h1>
     <ul class="patterns-list">
     {{ range .Pages.ByPublishDate.Reverse }}
       <li>
-        <h2>
+        <p id="post-title">
           <a href="{{ .Permalink }}">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
+		    <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+			  <use xlink:href="#bookmark"></use>
+		    </svg>
             {{ .Title }}
           </a>
-        </h2>
+        </p>
+        <p id="post-sub-title">
+          {{ dateFormat "Mon, 02-01-2006, 15 : 04" .PublishDate }}
+        </p>
       </li>        
     {{ end }}
     </ul>
