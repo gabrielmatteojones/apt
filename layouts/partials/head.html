@@ -26,6 +26,11 @@
   {{ $styles := $templateStyles | resources.ExecuteAsTemplate "css/styles.css" . }}
   <link rel="stylesheet" type="text/css" href="{{ $styles.Permalink }}">
 
+  {{ $templateStyles := resources.Get "css/markdown.css" }}
+  {{ $styles := $templateStyles }}
+  <link rel="stylesheet" type="text/css" href="{{ $styles.Permalink }}">
+
+
   <style id="inverter" media="none">
     html { filter: invert(100%) }
     * { background-color: inherit }

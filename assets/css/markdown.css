@@ -1,0 +1,15 @@
+/* Style for markdown */
+#main h1 {
+	margin-bottom: 1rem;
+}
+#main h3 {
+	margin-top: 1.5rem;
+	margin-bottom: 0.75rem;
+}
+#main p {
+	margin-bottom: 0.75rem;
+}
+#main pre {
+	margin-bottom: 0.75rem;
+}
+
