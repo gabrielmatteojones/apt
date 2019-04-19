@@ -1,1 +1,2 @@
-<span style="color:#ff6e40">{{ .Get 0 }}</span>
+{{ $content := .Get 0 }}
+<span style="color:#ff6e40">{{ replace $content "\\" "" }}</span>

@@ -37,9 +37,6 @@ option,
 [hidden] + *,
 li + li,
 body,
-.main-and-footer {
-    margin-top: 0;
-}
 .priority {
   margin-top: 0;
 }
@@ -348,10 +345,11 @@ caption {
 }
 .main-and-footer {
     margin-left: 18rem;
+	margin-right: 18rem;
 }
 .main-and-footer > div {
     max-width: 40rem;
-    margin: 0 0;
+    margin: auto auto;
     padding: 2.25rem;
 }
 [role="contentinfo"] {
@@ -1016,4 +1014,13 @@ h1 svg {
       border-left: 0.5rem solid;
       background: none;
   }
+}
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: #ff6e40;
+}
+
+::selection {
+  color: white; 
+  background: #ff6e40;
 }
