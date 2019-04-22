@@ -6,21 +6,34 @@
     </svg>
     Menu
   </button>
-  {{ $current := . }}
   <ul id="patterns-list">
-  {{ range .Site.Menus.main }}
+  {{ if eq .Site.Language.Lang "en" }}
     <li class="pattern">
-      {{ $active := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}
-      {{ $active = or $active (eq .Name $current.Title) }}
-      {{ $active = or $active (and (eq .Name "Blog") (eq $current.Section "post")) }}
-      {{ $active = or $active (and (eq .Name "Tags") (eq $current.Section "tags")) }}
-      <a href="{{ .URL }}" {{ if $active }}aria-current="page"{{ end }}>
+      <a href="/technical">
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
-        <span class="text">{{ .Name }}</span>
+        <span class="text">{{ .Site.Params.technical }}</span>
       </a>
     </li>
+  {{ else }}
+	<li class="pattern">
+      <a href="/vn/books">
+        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
+          <use xlink:href="#bookmark"></use>
+        </svg>
+        <span class="text">{{ .Site.Params.books }}</span>
+      </a>
+    </li>
+	<li class="pattern">
+      <a href="/vn/lifestyle">
+        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
+          <use xlink:href="#bookmark"></use>
+        </svg>
+        <span class="text">{{ .Site.Params.lifestyle }}</span>
+      </a>
+    </li>
+
   {{ end }}
   </ul>
 </nav>
