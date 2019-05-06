@@ -15,4 +15,7 @@
 #main ul {
 	margin-bottom: 0.75rem;
 }
-
+p img {
+	display: block;
+	margin: 0.75rem auto;
+}

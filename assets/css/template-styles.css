@@ -56,12 +56,6 @@ img {
 .img-link {
     border-bottom: none;
 }
-p img {
-    margin: 0.75rem 0;
-}
-figure p img {
-    margin: 0;
-}
 :focus:not([tabindex="-1"]),
 [data-expands]:focus svg,
 .patterns a:focus .text,
