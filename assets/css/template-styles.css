@@ -20,7 +20,7 @@ body {
     box-sizing: border-box;
 }
 html {
-    font-size: calc(1.15em);
+    font-size: calc(1em);
     line-height: 1.5;
     color: #111;
     background-color: #fefefe;
@@ -340,14 +340,26 @@ caption {
 	margin-top: 0.5rem;
 	text-align: center;
 }
-.main-and-footer {
-    margin-left: 18rem;
-	margin-right: 18rem;
-}
 .main-and-footer > div {
     max-width: 40rem;
-    margin: auto auto;
+    margin-top: auto;
+	margin-right: auto;
+	margin-left: 18rem;
+	margin-right: 0;
     padding: 2.25rem;
+}
+#ads {
+	color: red;
+	float: right;
+}
+.main-and-footer > div > .vertical-ads {
+	display: block;
+	position: fixed;
+	top: 50%;
+	right: 0;
+}
+.horizontal-ads {
+	display: none;
 }
 [role="contentinfo"] {
     font-size: 0.85rem;
@@ -879,7 +891,7 @@ h1 svg {
 }
 
 /* Media queries */
-@media screen and (max-width: 45em) {
+@media screen and (max-width: 70em) {
     body a {
       hyphens: auto;
     }
@@ -900,6 +912,11 @@ h1 svg {
     .main-and-footer {
         margin: 0;
     }
+	.main-and-footer > div {
+   	 	max-width: 40rem;
+    	margin: auto auto;
+    	padding: 2.25rem;
+	}
     main {
       min-height: auto;
     }
@@ -949,6 +966,14 @@ h1 svg {
     code {
       word-break: break-all;
     }
+	.horizontal-ads {
+		display: block;
+		color: red;
+		margin: 1.5rem auto;
+	}
+	.main-and-footer > div > .vertical-ads {
+		display: none;
+	}
 }
 @media print {
     .wrapper:not(.print-version) .intro-and-nav,
