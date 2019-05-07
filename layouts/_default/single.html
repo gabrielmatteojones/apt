@@ -1,13 +1,18 @@
 {{ define "main" }}
-  <div class="vertical-ads">
- 	<p>Góc nuôi thân</p> 
-  </div>
+  {{ if $.Site.Params.showAds }}
+ 	<div class="vertical-ads">
+ 		<p>Góc nuôi thân</p> 
+ 	</div>
+  {{ end }}
   <main id="main">
     <h1>{{ .Title }}</h1>
     {{ .Content }}
   </main>
-  <div class="horizontal-ads">
-	<p>Góc nuôi thân</p>
-  </div>
+  {{ if $.Site.Params.showAds }}
+	<div class="horizontal-ads">
+ 		<p>Góc nuôi thân</p> 
+ 	</div>
+  {{ end }}
+
   {{ template "_internal/disqus.html" . }}
 {{ end }}

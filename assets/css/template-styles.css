@@ -346,7 +346,10 @@ caption {
 	margin-right: auto;
 	margin-left: 18rem;
 	margin-right: 0;
-    padding: 2.25rem;
+    padding-top: 2.25rem;
+	padding-bottom: 2.25rem;
+	padding-right: 2.25rem;
+	padding-left: 4.5rem;
 }
 #ads {
 	color: red;
