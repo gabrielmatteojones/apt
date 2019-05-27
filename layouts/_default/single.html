@@ -6,6 +6,13 @@
   {{ end }}
   <main id="main">
     <h1>{{ .Title }}</h1>
+	{{ with .Params.tags }}
+		<p class="custom-tags" style="margin-bottom: 3rem;">
+			{{ range . }}
+				<a class="tag" href="{{ "tags" | absLangURL  }}/{{ . | urlize }}">#{{ upper . }}</a>
+			{{ end }}
+		</p>
+	{{ end }}
     {{ .Content }}
   </main>
   {{ if $.Site.Params.showAds }}

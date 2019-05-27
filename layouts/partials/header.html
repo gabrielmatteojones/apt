@@ -1,21 +1,21 @@
-<header class="intro-and-nav" role="banner" style="background-color:#F5F5F5">
-  <div>
+<header class="intro-and-nav" role="banner">
     <div class="intro">
-	  <a class="logo" href="/{{.Site.Language.Lang}}" aria-label="{{ .Site.Title }} home page">
-        <img src="{{ "images/logo.png" | absURL }}" alt="">
-      </a>
-	  <p class="author-name">Thach Do (a.k.a Rockie)</p>
-      <p class="library-desc">
-        {{ with .Site.Params.description }}
-          {{ . | markdownify }}
-        {{ end }}
-      </p>
-	  <p class="profiles">
-	  	<a href="https://linkedin.com/in/ddthach">LinkedIn</a>
-		|
-		<a href="https://github.com/dodaithach">Github</a>
-	  </p>
+	  <div class="logo">
+	  	<a href="/{{.Site.Language.Lang}}" aria-label="{{ .Site.Title }} home page">
+        	<img src="{{ "images/logo.png" | absURL }}" alt="">
+      	</a>
+	  </div>
+	  {{ if not .IsPage }}
+      	<p class="library-desc">
+        	{{ with .Site.Params.description }}
+          		{{ . | markdownify }}
+        	{{ end }}
+      	</p>
+	  	<p class="profiles">
+	  		<a href="https://linkedin.com/in/ddthach">LinkedIn</a>
+			|
+			<a href="https://github.com/dodaithach">Github</a>
+	  	</p>
+	  {{ end }}
     </div>
-    {{ partial "nav.html" . }}
-	</div>
 </header>

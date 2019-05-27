@@ -1,6 +1,7 @@
 /* Style for markdown */
 #main h1 {
-	margin-bottom: 3rem;
+	margin-top: 1rem;
+	margin-bottom: 0.5rem;
 }
 #main h3 {
 	margin-top: 1.5rem;
