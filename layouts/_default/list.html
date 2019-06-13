@@ -1,28 +1,20 @@
 {{ define "main" }}
 <main id="main">
-		<ul class="patterns-list">
-				{{ range .Pages.ByPublishDate.Reverse }}
-				<li>
-						<p id="post-title">
-						<a href="{{ .Permalink }}">
-								{{ .Title }}
-						</a>
-						</p>
-
-						<p id="post-sub-title">
-						<span>{{ dateFormat "Mon, 02-01-2006, 15 : 04" .PublishDate }}</span>
-						{{ with .Params.tags }}
-						{{ range . }}
-						<a class="tag" href="{{ "tags" | absLangURL  }}/{{ . | urlize }}">#{{ upper . }}</a>
-						{{ end }}
-						{{ end }}
-						</p>
-
-						<p class="desc">
-						{{ .Params.desc }}
-						</p>
-				</li>        
-				{{ end }}
-		</ul>
+	<ul>
+		{{ range .Pages.ByPublishDate.Reverse }}
+		<li>
+			<div id="list-item">
+				<a id="item-title" href="{{ .Permalink }}">{{ .Title }}</a>
+				<div id="date-and-tags">
+					{{ partial "date/date.html" . }}
+					{{ partial "tags/tags.html" . }}
+				</div>
+				<p id="item-desc">
+					{{ .Params.desc }}
+				</p>
+			</div>
+		</li>
+		{{ end }}
+	</ul>
 </main>
 {{ end }}

@@ -1,19 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Language.Lang }}">
-  {{ partial "head.html" . }}
-  <body>
-    <a href="#main">skip to content</a>
-    {{ partial "svg.html" . }}
-    <div class="wrapper" style="background-color:#FAFAFA">
-      {{ partial "header.html" . }}
-      <div class="main-and-footer">
-        <div>
-          {{ block "main" . }}{{ end }}
-          {{ partial "footer.html" . }}
-        </div>
-      </div>
-    </div>
-    {{ partial "script.html" . }}
-    {{ partial "katex.html" . }}
-  </body>
+{{ partial "head.html" . }}
+
+<body>
+  <div id="header-and-main">
+    {{ partial "header/header.html" . }}
+    {{ block "main" . }}{{ end }}
+  </div>
+  {{ partial "footer/footer.html" . }}
+</body>
+
 </html>
