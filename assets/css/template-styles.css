@@ -40,6 +40,6 @@ ul {
 }
 
 ::selection {
-  color: white;
-  background: #ff6e40;
+  color: black;
+  background: #fff59d;
 }
