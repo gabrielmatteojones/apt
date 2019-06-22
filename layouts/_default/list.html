@@ -1,20 +1,38 @@
 {{ define "main" }}
 <main id="main">
-	<ul>
-		{{ range .Pages.ByPublishDate.Reverse }}
-		<li>
-			<div id="list-item">
-				<a id="item-title" href="{{ .Permalink }}">{{ .Title }}</a>
-				<div id="date-and-tags">
-					{{ partial "date/date.html" . }}
-					{{ partial "tags/tags.html" . }}
-				</div>
-				<p id="item-desc">
-					{{ .Params.desc }}
-				</p>
-			</div>
-		</li>
+  <ul>
+		{{ range.Pages.ByPublishDate.Reverse }}
+		{{ if .Params.pinToTop }}
+    <li>
+      <div id="list-item">
+        <a id="item-title" href="{{ .Permalink }}">{{ .Title }}</a>
+        <div id="date-and-tags">
+          {{ partial "date/date.html" . }}
+          {{ partial "tags/tags.html" . }}
+        </div>
+        <p id="item-desc">
+          {{ .Params.desc }}
+        </p>
+      </div>
+    </li>
 		{{ end }}
-	</ul>
+		{{ end }}
+		{{ range.Pages.ByPublishDate.Reverse }}
+		{{ if not .Params.pinToTop }}
+    <li>
+      <div id="list-item">
+        <a id="item-title" href="{{ .Permalink }}">{{ .Title }}</a>
+        <div id="date-and-tags">
+          {{ partial "date/date.html" . }}
+          {{ partial "tags/tags.html" . }}
+        </div>
+        <p id="item-desc">
+          {{ .Params.desc }}
+        </p>
+      </div>
+    </li>
+		{{ end }}
+		{{ end }}
+  </ul>
 </main>
 {{ end }}
