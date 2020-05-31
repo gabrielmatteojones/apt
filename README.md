@@ -17,6 +17,7 @@ An accessibility-friendly Hugo theme, ported from the [original Cupper](https://
 - [Shortcodes](#shortcodes)
 - [Syntax highlighting](#syntax-highlighting)
 - [Disable toc for a blog post](#disable-toc-for-a-blog-post)
+- [Localization](#localization)
 - [Getting help](#getting-help)
 - [Credits](#credits)
 
@@ -83,6 +84,12 @@ title: "My page with a few headings"
 toc: false
 ---
 ```
+
+## Localization
+
+The strings in the templates of this theme can be localized. Make a copy of <THEME_BASE_FOLDER>/i18n/en.yaml to <YOUR_SITE_FOLDER>/i18n/<YOUR_SITE_LANGUAGE>.yaml, and translate one by one, changing the 'translation' field.
+
+[Here is a tutorial that goes more in depth about this.](https://regisphilibert.com/blog/2018/08/hugo-multilingual-part-2-i18n-string-localization/)
 
 ## Getting help
 
