@@ -105,6 +105,17 @@ You can provide an optional list of custom JS files, which must be placed inside
 
 See the [example site config file](https://github.com/zwbetz-gh/cupper-hugo-theme/blob/master/exampleSite/config.yaml) for sample usage.
 
+## Default to Dark Theme
+
+In the site config file set the site Param ``defaultDarkTheme`` to true.
+
+E.g. for ``config.yaml``
+```yaml
+params:
+  defaultDarkTheme: true
+  …
+
+```
 ## Getting help
 
 If you run into an issue that isn't answered by this documentation or the [`exampleSite`](https://github.com/zwbetz-gh/cupper-hugo-theme/tree/master/exampleSite), then visit the [Hugo forum](https://discourse.gohugo.io/). The folks there are helpful and friendly. **Before** asking your question, be sure to read the [requesting help guidelines](https://discourse.gohugo.io/t/requesting-help/9132).
