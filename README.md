@@ -19,6 +19,7 @@ An accessibility-friendly Hugo theme, ported from the [original Cupper](https://
 - [Disable toc for a blog post](#disable-toc-for-a-blog-post)
 - [Localization](#localization)
 - [Custom CSS and JS](#custom-css-and-js)
+- [Default to Dark Theme](#default-to-dark-theme)
 - [Getting help](#getting-help)
 - [Credits](#credits)
 
@@ -107,15 +108,20 @@ See the [example site config file](https://github.com/zwbetz-gh/cupper-hugo-them
 
 ## Default to Dark Theme
 
-In the site config file set the site Param ``defaultDarkTheme`` to true.
+In the site config file set the param `defaultDarkTheme` to true.
 
-E.g. for ``config.yaml``
+E.g. for `config.yaml`
 ```yaml
 params:
   defaultDarkTheme: true
-  …
-
 ```
+
+Note that the default of light or dark theme only applies to the first visit to a site using this theme. Once the site is visited the choice of dark or light theme is stored in 'local storage' in the browser.
+
+To reset to a 'first visit' scenario (e.g. for testing), one needs to either browse in private mode (aka Incognito/InPrivate/etc) or delete 'local storage' for this site. The easiest way to do that, but which affects other sites as well, is to use the 'Clear History' feature of the browser.
+
+Check your browser's help or documentation for details.
+
 ## Getting help
 
 If you run into an issue that isn't answered by this documentation or the [`exampleSite`](https://github.com/zwbetz-gh/cupper-hugo-theme/tree/master/exampleSite), then visit the [Hugo forum](https://discourse.gohugo.io/). The folks there are helpful and friendly. **Before** asking your question, be sure to read the [requesting help guidelines](https://discourse.gohugo.io/t/requesting-help/9132).

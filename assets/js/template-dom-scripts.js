@@ -114,7 +114,7 @@
   }
 
   function defaultDarkTheme() {
-{{- if and (isset .Site.Params "defaultdarktheme") (.Site.Params.defaultDarkTheme) }}
+{{- with .Site.Params.defaultDarkTheme }}
     if (localStorage.getItem('darkTheme') == null) {
       persistTheme('true');
       checkbox.checked = true;
