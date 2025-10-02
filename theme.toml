@@ -1,7 +1,7 @@
 name = "Gabriel Jones"
 license = "MIT"
 licenselink = "/"
-description = "Si dice che mi piaccia la grafica, è vero."
+description = "Si dice che mi piaccia la grafica, confermo."
 homepage = ""
 tags = ["accessible", "blog", "documentation", "dark"]
 features = ["accessible", "blog", "documentation", "dark"]
