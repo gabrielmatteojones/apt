@@ -1,8 +1,8 @@
-name = "Gabriel Jones"
+name = "Cupper"
 license = "MIT"
-licenselink = "/"
-description = "Si dice che mi piaccia la grafica, confermo."
-homepage = ""
+licenselink = "https://github.com/zwbetz-gh/cupper-hugo-theme/blob/master/LICENSE"
+description = "An accessibility-friendly Hugo theme, ported from the original Cupper project."
+homepage = "https://github.com/zwbetz-gh/cupper-hugo-theme"
 tags = ["accessible", "blog", "documentation", "dark"]
 features = ["accessible", "blog", "documentation", "dark"]
 min_version = "0.81.0"

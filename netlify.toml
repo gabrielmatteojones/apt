@@ -1,11 +1,11 @@
 [build]
-  publish = "gabrieljones/public"
-  command = "cd gabrieljones && hugo --themesDir ../.."
+  publish = "exampleSite/public"
+  command = "cd exampleSite && hugo --themesDir ../.."
 
 [build.environment]
   HUGO_VERSION = "0.83.1"
   HUGO_THEME = "repo"
-  HUGO_BASEURL = "https://dynamic-gingersnap-d26d6a.netlify.app/"
+  HUGO_BASEURL = "https://cupper-hugo-theme.netlify.app"
 
 [[headers]]
   for = "/*"
