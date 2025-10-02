@@ -17,8 +17,8 @@ imaging:
   quality: 99
 
 params:
-  description: An accessibility-friendly Hugo theme, ported from the [original Cupper](https://github.com/ThePacielloGroup/cupper) project.
-  homeMetaContent: An accessibility-friendly Hugo theme, ported from the original Cupper project.
+  description: Gabriel? Sì, mi piace pensarmi un po' come lui. Sono un developer, grafico e faccio da 'capo progetto' per un'iniziativa regionale. E, credetemi, questa è solo la punta dell'iceberg. C'è molto di più sotto!
+  homeMetaContent: Gabriel? Sì, mi piace pensarmi un po' come lui. Sono un developer, grafico e faccio da 'capo progetto' per un'iniziativa regionale. E, credetemi, questa è solo la punta dell'iceberg. C'è molto di più sotto!
   footer: Made with [Hugo](https://gohugo.io/). Themed by [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme). Deployed to [Netlify](https://www.netlify.com/).
   # For more date formats see https://gohugo.io/functions/format/
   dateFormat: Jan 2, 2006
@@ -56,9 +56,15 @@ menu:
     - name: About
       url: /about/
       weight: 4
-    - name: RSS
-      url: /index.xml
+    - name: Grafica
+      url: /grafica/
       weight: 5
+    - name: Libri
+      url: /Libri/
+      weight: 6
+    - name: FI25
+      url: /FI25/
+      weight: 7
 
 markup:
   defaultMarkdownHandler: goldmark
