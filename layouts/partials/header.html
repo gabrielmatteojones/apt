@@ -6,11 +6,9 @@
         href="{{ .Site.BaseURL }}"
         aria-label="{{ .Site.Title }} home page"
       >
-        {{ with .Site.Params.navTitleText }}
-          <h1>{{ . }}</h1>
-        {{ else }}
+          <h1>Gabriel Jones</h1>
           <img 
-            src="{{ "images/logo.svg" | relURL }}" 
+            src="{{ "images/logop.png" | relURL }}" 
             alt="{{ .Site.Params.logoAlt | default "Logo" }}"
           >
         {{ end }}
